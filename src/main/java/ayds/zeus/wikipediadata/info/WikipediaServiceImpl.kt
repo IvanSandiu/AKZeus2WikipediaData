@@ -1,17 +1,17 @@
 package ayds.zeus.wikipediadata.info
 
-import ayds.zeus.songinfo.moredetails.model.entities.WikipediaArticle
 import ayds.zeus.wikipediadata.WikipediaService
+import ayds.zeus.wikipediadata.entity.CardImpl
 import retrofit2.Response
 
 internal class WikipediaServiceImpl(
 
     private val wikipediaApi: WikipediaAPI,
-    private val wikipediaToArtistInfoResolver: WikipediaToArticleResolver
+    private val wikipediaToArtistInfoResolver: WikipediaToCardResolver
 
 ) : WikipediaService {
 
-    override fun getArtistInfo(artistName: String): WikipediaArticle? {
+    override fun getArtistInfo(artistName: String): CardImpl? {
         val callResponse = getArtistInfoFromService(artistName)
         return wikipediaToArtistInfoResolver.getArticleFromExternalData(callResponse.body())
     }

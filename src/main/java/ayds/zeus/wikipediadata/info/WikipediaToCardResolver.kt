@@ -1,12 +1,11 @@
 package ayds.zeus.wikipediadata.info
 
-import ayds.zeus.songinfo.moredetails.model.entities.WikipediaArticle
+import ayds.zeus.wikipediadata.entity.CardImpl
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 
-
-interface WikipediaToArticleResolver {
-    fun getArticleFromExternalData(serviceData: String?): WikipediaArticle?
+interface WikipediaToCardResolver {
+    fun getArticleFromExternalData(serviceData: String?): CardImpl?
 }
 
 const val SEARCH = "search"
@@ -15,12 +14,12 @@ const val SNIPPET = "snippet"
 const val PAGE_ID = "pageid"
 const val WIKIPEDIA_PREFIX_PAGE_ID = "https://en.wikipedia.org/?curid="
 
-internal class JsonToArticleResolver: WikipediaToArticleResolver {
+internal class JsonToCardResolver: WikipediaToCardResolver {
 
-    override fun getArticleFromExternalData(serviceData: String?): WikipediaArticle? =
+    override fun getArticleFromExternalData(serviceData: String?): CardImpl? =
         try {
             serviceData?.getFirstItem()?.let { item ->
-                WikipediaArticle(
+                CardImpl(
                     item.getArtistInfo(), item.getUrl()
                 )
             }
@@ -43,6 +42,4 @@ internal class JsonToArticleResolver: WikipediaToArticleResolver {
         val pageID = this[ayds.zeus.wikipediadata.info.PAGE_ID]
         return "${ayds.zeus.wikipediadata.info.WIKIPEDIA_PREFIX_PAGE_ID}$pageID"
     }
-
-
 }

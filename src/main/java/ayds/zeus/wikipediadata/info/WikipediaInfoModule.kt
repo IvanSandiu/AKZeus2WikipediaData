@@ -13,10 +13,10 @@ object WikipediaInfoModule {
             .addConverterFactory(ScalarsConverterFactory.create())
             .build()
     private val wikipediaInfoAPI = wikipediaAPIretrofit.create(WikipediaAPI::class.java)
-    private val wikipediaToArticleResolver: WikipediaToArticleResolver = JsonToArticleResolver()
+    private val wikipediaToCardResolver: WikipediaToCardResolver = JsonToCardResolver()
 
     val wikipediaInfoService: WikipediaService = WikipediaServiceImpl(
             wikipediaInfoAPI,
-            wikipediaToArticleResolver
+            wikipediaToCardResolver
     )
 }
