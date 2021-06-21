@@ -1,9 +1,9 @@
 package ayds.zeus.wikipediadata
 
-import ayds.zeus.wikipediadata.entity.Card
+import ayds.zeus.wikipediadata.entity.WikipediaArticle
 
 
 interface WikipediaService {
 
-    fun getArtistInfo(artistName : String): Card?
+    fun getArtistInfo(artistName : String): WikipediaArticle?
 }
