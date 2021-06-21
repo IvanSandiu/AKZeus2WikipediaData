@@ -5,7 +5,7 @@ import ayds.zeus.wikipediadata.WikipediaService
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
-object WikipediaInfoModule {
+internal object WikipediaInfoModule {
 
     private const val WIKIPEDIA_URL = "https://en.wikipedia.org/w/"
     private val wikipediaAPIretrofit = Retrofit.Builder()
