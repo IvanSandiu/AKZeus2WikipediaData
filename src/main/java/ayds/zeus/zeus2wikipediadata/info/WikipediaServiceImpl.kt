@@ -1,7 +1,7 @@
-package ayds.zeus.wikipediadata.info
+package ayds.zeus.zeus2wikipediadata.info
 
-import ayds.zeus.wikipediadata.WikipediaService
-import ayds.zeus.wikipediadata.entity.WikipediaArticle
+import ayds.zeus.zeus2wikipediadata.WikipediaService
+import ayds.zeus.zeus2wikipediadata.entity.WikipediaArticle
 import retrofit2.Response
 
 internal class WikipediaServiceImpl(

@@ -1,4 +1,4 @@
-package ayds.zeus.wikipediadata.entity
+package ayds.zeus.zeus2wikipediadata.entity
 
 const val WIKIPEDIA_LOGO = "https://upload.wikimedia.org/wikipedia/commons/8/8c/Wikipedia-logo-v2-es.png"
 

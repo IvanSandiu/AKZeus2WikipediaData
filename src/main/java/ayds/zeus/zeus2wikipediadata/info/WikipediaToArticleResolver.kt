@@ -1,6 +1,6 @@
-package ayds.zeus.wikipediadata.info
+package ayds.zeus.zeus2wikipediadata.info
 
-import ayds.zeus.wikipediadata.entity.WikipediaArticle
+import ayds.zeus.zeus2wikipediadata.entity.WikipediaArticle
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 

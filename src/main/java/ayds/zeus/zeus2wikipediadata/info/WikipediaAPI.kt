@@ -1,4 +1,4 @@
-package ayds.zeus.wikipediadata.info
+package ayds.zeus.zeus2wikipediadata.info
 
 import retrofit2.Call
 import retrofit2.http.GET

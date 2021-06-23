@@ -16,7 +16,7 @@ nos retornara una `card` de wikipedia. Dicha `card` contendra la informacion con
 
 ## Código
 Primero importamos el servicio del submodulo:
-`import ayds.zeus.wikipediadata.WikipediaService`
+`import zeus2wikipediadata.WikipediaService`
 
 Creamos una variable que llame al Servicio de Wikipedia
 `private val wikipediaService: WikipediaService`

@@ -1,7 +1,7 @@
-package ayds.zeus.wikipediadata.info
+package ayds.zeus.zeus2wikipediadata.info
 
 
-import ayds.zeus.wikipediadata.WikipediaService
+import ayds.zeus.zeus2wikipediadata.WikipediaService
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
