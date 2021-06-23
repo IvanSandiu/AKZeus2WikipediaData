@@ -1,7 +1,7 @@
 package ayds.zeus.wikipediadata.info
 
 import ayds.zeus.wikipediadata.WikipediaService
-import ayds.zeus.wikipediadata.entity.WikipediaArticleImpl
+import ayds.zeus.wikipediadata.entity.WikipediaArticle
 import retrofit2.Response
 
 internal class WikipediaServiceImpl(
@@ -11,7 +11,7 @@ internal class WikipediaServiceImpl(
 
 ) : WikipediaService {
 
-    override fun getArtistInfo(artistName: String): WikipediaArticleImpl? {
+    override fun getArtistInfo(artistName: String): WikipediaArticle? {
         val callResponse = getArtistInfoFromService(artistName)
         return wikipediaToArtistInfoResolver.getArticleFromExternalData(callResponse.body())
     }
