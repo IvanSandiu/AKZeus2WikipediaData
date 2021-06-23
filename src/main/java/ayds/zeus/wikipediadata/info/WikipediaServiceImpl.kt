@@ -7,7 +7,7 @@ import retrofit2.Response
 internal class WikipediaServiceImpl(
 
     private val wikipediaApi: WikipediaAPI,
-    private val wikipediaToArtistInfoResolver: WikipediaToCardResolver
+    private val wikipediaToArtistInfoResolver: WikipediaToArticleResolver
 
 ) : WikipediaService {
 

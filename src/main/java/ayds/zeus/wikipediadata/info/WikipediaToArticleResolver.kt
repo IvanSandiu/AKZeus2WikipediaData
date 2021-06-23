@@ -4,7 +4,7 @@ import ayds.zeus.wikipediadata.entity.WikipediaArticle
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 
-interface WikipediaToCardResolver {
+interface WikipediaToArticleResolver {
     fun getArticleFromExternalData(serviceData: String?): WikipediaArticle?
 }
 
@@ -14,7 +14,7 @@ const val SNIPPET = "snippet"
 const val PAGE_ID = "pageid"
 const val WIKIPEDIA_PREFIX_PAGE_ID = "https://en.wikipedia.org/?curid="
 
-internal class JsonToCardResolver: WikipediaToCardResolver {
+internal class JsonToArticleResolver: WikipediaToArticleResolver {
 
     override fun getArticleFromExternalData(serviceData: String?): WikipediaArticle? =
         try {
