@@ -27,6 +27,11 @@ Creamos una variable perteneciente al servicio de Wikipedia
 val wikipediaService: WikipediaService
 ```
 
+Creamos una instancia del servicio de Wikipedia
+```
+val wikipediaService: WikipediaService = wikipediaInfoService
+```
+
 Obtenemos el Articulo de la siguiente manera
 ```
 val articulo =  wikipediaService.getArtistInfo(artistName)
